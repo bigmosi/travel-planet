@@ -24,6 +24,9 @@ Route::get('/logout', 'Auth\Auth0IndexController@logout')->name('logout')->middl
 Route::group(['prefix'=> 'dashboard'], function(){
     Route::view('/', 'dashboard/dashboard');
     Route::get('reservations/create/{id}', [ReservationController::class, 'create']) -> name('create');
-    Route::resource('reservations', 'ReservationController')->except('create');
+    // Route::resource('reservations', 'ReservationController')->except('create');
+    Route::post('reservations', [ReservationController::class, 'store']);
+    Route::get('reservations', [ReservationController::class, 'index']);
+    Route::get('reservations', [ReservationController::class, 'store']) ->name('reservations.store');
 });
 

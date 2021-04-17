@@ -21,7 +21,7 @@
                 <td>{{$reservation->room->hotel['name']}}</td>
                 <td>{{$reservation->arrival}}</td>
                 <td>{{$reservation->departure}}</td>
-                <td>{{$resaervation->room['type']}}</td>
+                <td>{{$reservation->room['type']}}</td>
                 <th>{{$reservation->num_of_guests}}</th>
                 <th>{{$reservation->room['price']}}</th>
                 <td><a href="/dashboard/reservations/{{$reservation->id}}/edit" class="btn btn-sm btn-success">Edit</a></td>
